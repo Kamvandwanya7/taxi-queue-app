@@ -18,7 +18,6 @@ function joinQue(){
     taxiQueue.joinQueue();
     passengerQueueCount.innerHTML = taxiQueue.queueLength();
     // localStorage.setItem("passengersJoin", queueLength())
-
 }
 
 function leaveQue(){
@@ -35,6 +34,10 @@ function taxiJoinQue(){
 
 function depart(){
    taxiQueue.taxiDepart();
+   passengerQueueCount.innerHTML= taxiQueue.queueLength();
+   taxiQueCountElem.innerHTML= taxiQueue.taxiQueueLength();
+
+
 }
 // localStorage.getItem()
 
