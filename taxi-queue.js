@@ -28,12 +28,9 @@ function TaxiQueue() {
 	}
 
 	function taxiDepart() {
-		if(passengerCounter < 12){
-            
-		}
-		if (passengerCounter === 12) {
-	        joinTaxiQueue();
-			passengerCounter.clear();
+		if (passengerCounter >= 12 && taxiCounter >0) {
+	        taxiCounter-=1;
+			passengerCounter-=12;
 		}
 	}
 
